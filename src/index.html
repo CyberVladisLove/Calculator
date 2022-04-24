@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Investment Calculator</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<main class="calc-wrapper">
+		<div class="container">
+			<form id="form">
+				<div class="heading">
+					<h1 class="heading-title">Investment Calculator</h1>
+				</div>
+
+				<!-- Процент -->
+				<div class="calc-section" style="border-top-left-radius: 7px 7px; border-top-right-radius: 7px 7px;">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline">percentage:</span>
+						<input type="number" min="1" max="100" value="15" id="percent-input"
+							class="title__inline input-short" />
+						<span class="title__inline">%</span>
+					</label>
+					<input type="range" id="percent-range" class="range-input" min="1" max="100" value="15" step="1" />
+				</div>
+
+				<!-- Период -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline">period:</span>
+						<input type="number" min="1" max="120" value="12" id="period-input"
+							class="title__inline input-short" />
+						<span class="title__inline">months</span>
+					</label>
+					<input type="range" id="period-range" class="range-input" min="1" max="120" value="12" step="1" />
+				</div>
+
+				<!-- Размер вклада -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline">deposit:</span>
+						<input type="number" min="1000" max="100000000" value="1000" id="deposit-input"
+							class="title__inline input-short" style="width:150px" step="1000" />
+						<span class="title__inline">$</span>
+					</label>
+					<input type="range" id="deposit-range" class="range-input" min="1000" max="1000000" value="1000"
+						step="1000" />
+				</div>
+
+				<!-- Тип вклада -->
+				<div class="calc-section" style="border-bottom-left-radius: 7px 7px; border-bottom-right-radius: 7px 7px;">
+					<h4 class="checkbox-wrapper title-bold section-title">deposit type</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						
+						<input type="radio" class="radio" name="type" value="replenishes" checked/>
+						<div class="title-lite">
+							monthly profit replenishes the deposit
+							<span class="note">increases income</span>
+						</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="type" value="cashedout"  />
+						<div class="title-lite">
+							monthly profit is cashed out from the deposit
+							<span class="note">reduces income</span>
+						</div>
+					</label>		
+				</div>
+		
+				<!-- Доход -->
+				<div class="calc-income">
+					<div class="row">
+						<div class="column" style="display: inline-block;width: 49%;">
+							<div class="calc-income-title">income:</div>
+							<div class="calc-income-value">
+								<span id="total-income"></span>
+								$
+							</div>
+						</div>
+						<div class="column" style="display: inline-block; width: 49%;">
+							<div class="calc-income-title">clear income:</div>
+							<div class="calc-income-value">
+								<span id="clear-income"></span>
+								$
+							</div>
+						</div>
+					</div>
+				</div>		
+			</form>
+		</div>
+	</main>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
