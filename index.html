@@ -28,16 +28,7 @@
 					<input type="range" id="percent-range" class="range-input" min="1" max="100" value="15" step="1" />
 				</div>
 
-				<!-- Период -->
-				<div class="calc-section">
-					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
-						<span class="title__inline">period:</span>
-						<input type="number" min="1" max="120" value="12" id="period-input"
-							class="title__inline input-short" />
-						<span class="title__inline">months</span>
-					</label>
-					<input type="range" id="period-range" class="range-input" min="1" max="120" value="12" step="1" />
-				</div>
+				
 
 				<!-- Размер вклада -->
 				<div class="calc-section">
@@ -45,12 +36,29 @@
 						<span class="title__inline">deposit:</span>
 						<input type="number" min="1000" max="100000000" value="1000" id="deposit-input"
 							class="title__inline input-short" style="width:150px" step="1000" />
-						<span class="title__inline">$</span>
+						<span class="title__inline">Florens</span>
 					</label>
 					<input type="range" id="deposit-range" class="range-input" min="1000" max="1000000" value="1000"
 						step="1000" />
 				</div>
 
+				<!-- Период вклада -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline"style="width:15%;">start:</span>
+						<input type="date" id="startDate-input"class="title__inline input-short" style="width:30%; " >
+						
+					</label>
+					
+				</div>
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline" style="width:15%;">end:</span>
+						<input type="date"  id="endDate-input" class="title__inline input-short" style="width:30%;" >
+						
+					</label>
+					
+				</div>
 				<!-- Тип вклада -->
 				<div class="calc-section" style="border-bottom-left-radius: 7px 7px; border-bottom-right-radius: 7px 7px;">
 					<h4 class="checkbox-wrapper title-bold section-title">deposit type</h4>
@@ -70,6 +78,7 @@
 						</div>
 					</label>		
 				</div>
+				
 		
 				<!-- Доход -->
 				<div class="calc-income">
@@ -78,14 +87,14 @@
 							<div class="calc-income-title">income:</div>
 							<div class="calc-income-value">
 								<span id="total-income"></span>
-								$
+								
 							</div>
 						</div>
 						<div class="column" style="display: inline-block; width: 49%;">
 							<div class="calc-income-title">clear income:</div>
 							<div class="calc-income-value">
 								<span id="clear-income"></span>
-								$
+								
 							</div>
 						</div>
 					</div>
